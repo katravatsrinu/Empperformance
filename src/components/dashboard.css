@@ -1,0 +1,256 @@
+.dashboard-container {
+  width: 90%;
+  margin: 30px auto;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.dashboard-header {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+  background: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f2f2f2;
+}
+.text-high-performance {
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.text-good-performance {
+  color: green;
+  font-weight: bold;
+}
+
+.text-average-performance {
+  color: orange;
+  font-weight: bold;
+}
+
+.text-low-performance {
+  color: red;
+  font-weight: bold;
+}
+
+.export-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.export-btn {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.excel-btn {
+  background-color: #217346;
+  color: white;
+}
+
+.pdf-btn {
+  background-color: #d9534f;
+  color: white;
+}
+.green-text { color: green; font-weight: bold; }
+.yellow-text { color: orange; font-weight: bold; }
+.red-text { color: red; font-weight: bold; }
+.gray-text { color: gray; font-weight: bold; }
+.export-btn { margin: 10px; padding: 8px 12px; background: #007bff; color: white; border: none; cursor: pointer; }
+.export-btn:hover { background: #0056b3; }
+.performance-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.top-performers,
+.worst-performers {
+  width: 48%;
+}
+
+.green-text {
+  color: green;
+  font-weight: bold;
+}
+
+.yellow-text {
+  color: orange;
+  font-weight: bold;
+}
+
+.red-text {
+  color: red;
+  font-weight: bold;
+}
+
+.gray-text {
+  color: gray;
+}
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .dashboard-header {
+    font-size: 20px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .performance-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-performers,
+  .worst-performers {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-container {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .dashboard-header {
+    font-size: 20px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 8px;
+  }
+
+  .export-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .export-btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .performance-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-performers,
+  .worst-performers {
+    width: 100%;
+  }
+
+  .top-performers h3,
+  .worst-performers h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard-header {
+    font-size: 18px;
+  }
+
+  table {
+    font-size: 10px;
+  }
+
+  th, td {
+    padding: 5px;
+  }
+
+  .export-btn {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+.charts-container {
+  width: 90%;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.chart-wrapper {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .charts-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .chart-wrapper {
+    padding: 10px;
+  }
+}
