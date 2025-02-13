@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Import Link
+import { useNavigate, Link } from "react-router-dom";
 import "./login.css";
 
 const LoginPage = ({ setUser }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate(); // Initialize navigation
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     const users = JSON.parse(localStorage.getItem("users")) || [];
@@ -14,11 +14,13 @@ const LoginPage = ({ setUser }) => {
     if (user) {
       localStorage.setItem("loggedInUser", JSON.stringify(user));
       setUser(user);
-      navigate("/upload"); // Redirect to UploadCSV after login
+      navigate("/upload");
     } else {
       alert("Invalid credentials. Please try again.");
     }
   };
+
+  const sampleCSV = "/hotel_employee_performance_updated.csv";
 
   return (
     <div className="auth-container">
@@ -37,11 +39,13 @@ const LoginPage = ({ setUser }) => {
       />
       <button onClick={handleLogin}>Login</button>
 
-      {/* Register Link */}
       <p>
-        Don't have an account?{" "}
-        <Link to="/register" className="register-link">Register</Link>
+        Don't have an account? <Link to="/register" className="register-link">Register</Link>
       </p>
+      <p>Please download the file for upload as input</p>
+      <a href={sampleCSV} download>
+        <button type="button">Download Sample CSV</button>
+      </a>
     </div>
   );
 };
